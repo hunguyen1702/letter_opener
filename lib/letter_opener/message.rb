@@ -19,6 +19,7 @@ module LetterOpener
     ERROR_MSG = '%s or default configuration must be given'.freeze
 
     def initialize(mail, options = {})
+      binding.pry
       @mail = mail
       @location = options[:location] || LetterOpener.configuration.location
       @part = options[:part]
